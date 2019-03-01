@@ -92,7 +92,7 @@ print("Tests Passed: " + str(tests_passed))
 print("Tests Failed: " + str(tests_failed) + "\n")
 if tests_failed > 0:
 	for test, num in failed_tests_list.items():
-		sys.stdout.write("Failed test " + test + " a total of " + str(num) + "/" + str(num_reps) + " times")
+		print("Failed test " + test + " a total of " + str(num) + "/" + str(num_reps) + " times")
 
 if(not save_tests):
 	cleanup()
