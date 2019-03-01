@@ -5,7 +5,7 @@ Automates the testing of code for Professor Gheith's 429 and 439 classes by down
 This script will download all of the files currently on Gheith's website and test them on a local machine immediately, skipping the wait period to run tests on his server. 
 
 ## Usage
-Using this thing is super easy. Just put it in the root directory of a project folder, like `cs439_sp19_p5` and type `python runTests.py`. Easy.
+Using this thing is super easy. Just put it in the root directory of a project folder, like `cs439_sp19_p5` and type `python runTests.py`. It will see which directory you called it from and find the right tests to use. Easy.
 
 ## Optional Flags
 There are a couple of things that you can do to use different functionality of the script. 
