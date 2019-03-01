@@ -4,9 +4,6 @@ Automates the testing of code for Professor Gheith's 429 and 439 classes by down
 ## Description
 This script will download all of the files currently on Gheith's website and test them on a local machine immediately, skipping the wait period to run tests on his server. 
 
-### Disclaimer
-I'm not sure if this will work on Docker machines, because it relies on having access the the ~Gheith folder that is on lab machines.
-
 ## Usage
 Using this thing is super easy. Just put it in the root directory of a project folder, like `cs439_sp19_p5` and type `python runTests.py`. Easy.
 
@@ -15,6 +12,9 @@ There are a couple of things that you can do to use different functionality of t
 * `python runTests.py -s`
   * By default, the script will delete the tests when it is finished and leave your folder the way it was. If you use the `-s` flag, it will save the tests when you're done.
 * `python runTests.py -c`
-  * Alternately, if you have the tests saved on your machine and want to get rid of them, the `-c` flag will just clean up your directory without actually running the tests. However, this **WILL NOT** delete any test that is named with your UTCS ID, and it will not delete and of the t0, t1, etc.
+  * Alternately, if you have the tests saved on your machine and want to get rid of them, the `-c` flag will just clean up your directory without actually running the tests. However, this **WILL NOT** delete any test that is named with your UTCS ID, and it will not delete any of the default tests, like t0, t1, etc.
 * `python runTests.py -r 10`
   * By default, the script runs the tests 1 time. If you use the `-r` flag with a value specified, like the example above, the script will take that value and run it that many times. In the example above, the script will loop through the tests 10 times.
+  
+## Disclaimer
+I'm not sure if this will work on Docker machines, because it relies on having access the the ~Gheith folder that is on lab machines.
