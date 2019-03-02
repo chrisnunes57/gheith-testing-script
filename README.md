@@ -8,7 +8,7 @@ This script will download all of the files currently on Gheith's website and tes
 Using this thing is super easy. Just put it in the root directory of a project folder, like `cs439_sp19_p5` and type `python runTests.py`. It will see which directory you called it from and find the right tests to use. Easy. 
 
 ## Important
-For this to work, you have to be running it in a file that hasn't been renamed. For instance, if the lab was cloned onto your computer as "cs439_sp19_<CSID>_p5", that's what the directory name has to be for the script to work.
+For this to work, you have to be running it in a file that hasn't been renamed. For instance, if the lab was cloned onto your computer as `cs439_sp19_<CSID>_p5`, that's what the directory name has to be for the script to work.
 
 ## Optional Flags
 There are a couple of things that you can do to use different functionality of the script. 
