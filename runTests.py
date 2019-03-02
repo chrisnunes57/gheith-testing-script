@@ -2,10 +2,19 @@ from os import listdir, remove
 from os.path import *
 import subprocess
 import sys
+import re
 
 # Some instance variables
 save_tests = False
 mypath = dirname(abspath(__file__))
+
+regex_pattern = re.compile("cs4.{2,3}_\w{1,2}\d\d_.+?_\w\d{1,2}")
+
+if not regex_pattern.search(mypath):
+	print("\n*** HEY: You can't use the script in a directory that's been renamed.")
+	print("*** Make sure that the name of the directory is the same as it was when you cloned it.\n")
+	exit()
+
 tests_passed = 0
 tests_failed = 0
 failed_tests_list = {}
@@ -93,6 +102,6 @@ print("Tests Failed: " + str(tests_failed) + "\n")
 if tests_failed > 0:
 	for test, num in failed_tests_list.items():
 		print("Failed test " + test + " a total of " + str(num) + "/" + str(num_reps) + " times")
-
+print("")
 if(not save_tests):
 	cleanup()
