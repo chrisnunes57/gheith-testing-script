@@ -36,7 +36,7 @@ tests = list(filter(lambda file: file.lower().endswith(('.cc', '.ok')), file_nam
 # Here we clean up all of the tests that we downloaded
 def cleanup():
 	files = [f for f in listdir(mypath) if isfile(join(mypath, f))]
-	tests_to_remove = list(filter(lambda file: file.lower().endswith(('.cc', '.ok', '.raw', '.diff', '.out')) and not file.lower().startswith(('t', username)), files))
+	tests_to_remove = list(filter(lambda file: file.lower().endswith(('.cc', '.ok', '.raw', '.diff', '.out', '.img')) and not file.lower().startswith(('t', username)), files))
 	for test in tests_to_remove:
 		remove(test)
 
